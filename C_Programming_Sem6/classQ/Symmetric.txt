@@ -1,0 +1,114 @@
+//class question
+#include <stdio.h>
+
+int main()
+{
+    int m,n;
+    printf("give dimension for matrix - ");
+    scanf("%d %d", &m, &n);
+    
+    int Arr[m][n]={};
+    
+    for(int i=0; i<=m-1; i++)
+    {
+        for(int j=0; j<=n-1; j++)
+        {
+            scanf("%d", &Arr[i][j]);
+        }
+    }
+    
+    printf("entered matrix is - \n");
+    
+    for(int i=0; i<=2; i++)
+    {
+        for(int j=0; j<=2; j++)
+        {
+            printf("%d ", Arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    int flag=0;
+    
+    for(int i=0; i<=2; i++)
+    {
+        for(int j=0; j<=2; j++)
+        {
+            if(Arr[i][j] != Arr[j][i])
+            {
+                flag=1;
+            }
+        }
+    }
+    
+    if(flag==1)
+    {
+        printf("not symmetric");
+    }
+    else
+    {
+        printf("symmetric");
+    }
+
+    return 0;
+}
+
+
+/*
+
+//class question
+#include <stdio.h>
+
+int main()
+{
+    int m,n;
+    printf("give dimension for matrix - ");
+    scanf("%d", &n);
+    
+    int Arr[n][n];
+    
+    for(int i=0; i<=n-1; i++)
+    {
+        for(int j=0; j<=n-1; j++)
+        {
+            scanf("%d", &Arr[i][j]);
+        }
+    }
+    
+    printf("entered matrix is - \n");
+    
+    for(int i=0; i<=2; i++)
+    {
+        for(int j=0; j<=2; j++)
+        {
+            printf("%d ", Arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+    int flag=0;
+    
+    for(int i=0; i<=2; i++)
+    {
+        for(int j=0; j<=2; j++)
+        {
+            if(Arr[i][j] != Arr[j][i])
+            {
+                flag=1;
+            }
+        }
+    }
+    
+    if(flag==1)
+    {
+        printf("not symmetric");
+    }
+    else
+    {
+        printf("symmetric");
+    }
+
+    return 0;
+}
+
+*/
